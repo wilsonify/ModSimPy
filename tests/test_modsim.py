@@ -609,10 +609,10 @@ class TestMagnitudeUNITS(unittest.TestCase):
     def test_UNITS(self):
         # scalar
         x = 5
-        res = modsim.UNITS(x)
-        self.assertEqual(res, 1)
-        res = modsim.UNITS(x * modsim.UNITS.meter)
-        self.assertEqual(res, modsim.UNITS.meter)
+        res = modsim.Quantity(x)
+        self.assertEqual(res, x)
+        res = modsim.Quantity(x * modsim.UNITS.meter)
+        self.assertEqual(res.units, modsim.UNITS.meter)
 
         # list (result is list)
         t = [1, 2, 3]
