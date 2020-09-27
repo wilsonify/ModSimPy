@@ -5,6 +5,7 @@ seaborn
 pandas
 scipy
 pint
+pint-pandas
 sympy
 lxml
 html5lib
